@@ -1,4 +1,4 @@
-import { PointerHighlight } from "./ui/PointerHighlight";
+import { PointerHighlight } from "../ui/PointerHighlight";
 
 export function PointerHighlightDemo() {
   return (

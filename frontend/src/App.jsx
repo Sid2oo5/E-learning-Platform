@@ -4,11 +4,10 @@ import viteLogo from '/vite.svg'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { SignupFormDemo } from './components/SignupFormDemo'
 import { NavbarDemo } from './components/NavbarDemo'
-import  Dashboard  from './components/Dashboard'
-import Explore from './components/Explore'
+import Explore from './components/container/Explore'
 import Problem from './components/Problem'
 import './App.css'
-import Dashboard from './components/Dashboard'
+import Dashboard from './components/container/Dashboard'
 
 function App() {
  
