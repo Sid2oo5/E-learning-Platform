@@ -8,6 +8,7 @@ import  Dashboard  from './components/Dashboard'
 import Explore from './components/Explore'
 import Problem from './components/Problem'
 import './App.css'
+import Dashboard from './components/Dashboard'
 
 function App() {
  
@@ -19,6 +20,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/explore" element={<Explore />} /> 
         <Route path="/problems" element={<Problem />} />
+
       </Routes>
     </BrowserRouter>
   )
