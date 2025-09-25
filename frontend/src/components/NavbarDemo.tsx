@@ -27,7 +27,7 @@ export function NavbarDemo() {
     },
     {
       name: "Dashboard",
-      link: "#dashboard",
+      link: "/dashboard",
     },
   ];
  
