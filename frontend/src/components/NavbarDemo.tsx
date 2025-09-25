@@ -19,11 +19,11 @@ export function NavbarDemo() {
   const navItems = [
     {
       name: "Explore",
-      link: "#explore",
+      link: "/explore",
     },
     {
       name: "Problems",
-      link: "#problems",
+      link: "/problems",
     },
     {
       name: "Dashboard",

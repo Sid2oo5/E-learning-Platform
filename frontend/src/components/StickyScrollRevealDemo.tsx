@@ -4,62 +4,65 @@ import { StickyScroll } from "./ui/sticky-scroll-reveal";
 
 
 const content = [
-  {
-    title: "Collaborative Editing",
+    {
+    title: "Collaborative Learning",
     description:
-      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+      "Study together in real time with classmates, teachers, and mentors. Share notes, exchange ideas, and solve problems as a team. Our platform helps you stay connected and learn faster through collaboration.",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
         <img
-          src="/linear.webp"
+          src="https://imgs.search.brave.com/QYkywUruM7s0fmQhcb69bsG2RnIhHAwIavwCKIuF3-0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9jb2xs/YWJvcmF0aXZlLWxl/YXJuaW5nLXNob3du/LWJ1c2luZXNzLXBo/b3RvLXVzaW5nLXRl/eHQtMjM0MTE3MTY1/LmpwZw"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="linear board demo" />
+          alt="students collaborating"
+        />
       </div>
     ),
   },
   {
-    title: "Real time changes",
+    title: "Instant AI Help",
     description:
-      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+      "Clear your doubts instantly. Get step-by-step answers powered by AI across subjects like Math, Science, and Languages. No waiting — just type your question and get help anytime, anywhere.",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
         <img
-          src="/linear.webp"
+          src="https://imgs.search.brave.com/EDi54-gI6qahbqMrzto5znkiYLj_6CBzhHOEr0lUBEQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9odW1h/bmxpLmFpL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDI1LzA2L3N0/ZXB0b2Rvd24uY29t/ODQwMDY4LmpwZw"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="linear board demo" />
+          alt="AI helping student"
+        />
       </div>
     ),
   },
   {
-    title: "Version control",
+    title: "Progress Tracking",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Keep track of your learning journey with real-time progress updates. Know what topics you’ve mastered and what needs revision. Stay aligned with your study goals and boost your performance with clarity.",
     content: (
       <div className="flex h-full w-full items-center justify-center text-white">
         <img
-          src="/linear.webp"
+          src="https://imgs.search.brave.com/SxBmQ2dDRQ0YYh3GFtqNU9Ipi7bZ4WsfzR-FJGJhQtE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/dmVjdG9yc3RvY2su/Y29tL2kvNTAwcC8x/Ni81My9idXNpbmVz/c21hbi1jbGltYmlu/Zy1jYXJlZXItY2hh/cnQtdmVjdG9yLTUz/OTcxNjUzLmpwZw"
           width={300}
           height={300}
           className="h-full w-full object-cover"
-          alt="linear board demo" />
+          alt="progress tracking dashboard"
+        />
       </div>
     ),
   },
   {
-    title: "Running out of content",
+    title: "Limitless Resources",
     description:
-      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+      "Never run out of study material again. From past papers to curated notes and practice quizzes, our platform ensures you always have access to the right content at the right time.",
     content: (
-      <div
-        className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
-        Running out of content
+      <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] text-white">
+        Limitless Learning Resources
       </div>
     ),
   },
+
 ];
 export function StickyScrollRevealDemo() {
   return (

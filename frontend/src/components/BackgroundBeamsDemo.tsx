@@ -20,7 +20,6 @@ export function BackgroundBeamsDemo() {
       <AppleCardsCarouselDemo />
       <StickyScrollRevealDemo/>
       <FloatingDockDemo />
-      <Dashboard/>
       <hr />
       <Footer />
     <div className="h-[10rem] w-full rounded-md flex flex-col items-center justify-center antialiased">
