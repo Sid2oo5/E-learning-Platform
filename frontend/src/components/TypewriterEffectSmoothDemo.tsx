@@ -1,5 +1,6 @@
 "use client";
 import {TypewriterEffectSmooth } from "./ui/typewriter-effect";
+
 export function TypewriterEffectSmoothDemo() {
   const words = [
     {
@@ -32,10 +33,11 @@ export function TypewriterEffectSmoothDemo() {
           className="w-40 h-10 rounded-xl bg-black border dark:border-white border-transparent text-white text-sm">
           Join now
         </button>
-        <button
-          className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
-          Signup
-        </button>
+          <button
+            className="w-40 h-10 rounded-xl bg-white text-black border border-black  text-sm">
+            Signup
+          </button>
+    
       </div>
     </div>
   );

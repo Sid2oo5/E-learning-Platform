@@ -4,6 +4,10 @@ import { BackgroundBeams } from "./ui/background-beams";
 import { FeaturesSectionDemo } from "./FeaturesSectionDemo";
 import { TypewriterEffectSmoothDemo } from "./TypewriterEffectSmoothDemo";
 import { FloatingDockDemo } from "./FloatingDockDemo";
+import { InfiniteMovingCardsDemo } from "./InfiniteMovingCardsDemo";
+import { StickyScrollRevealDemo } from "./StickyScrollRevealDemo";
+import { AppleCardsCarouselDemo } from "./AppleCardsCarouselDemo"; 
+import Footer from "./Footer"; 
 // import { TextGenerateEffectDemo } from "./TextGenerateEffectDemo";
  
 export function BackgroundBeamsDemo() {
@@ -11,8 +15,13 @@ export function BackgroundBeamsDemo() {
     <>
       <TypewriterEffectSmoothDemo />
       <FeaturesSectionDemo />
+      <InfiniteMovingCardsDemo />
+      <AppleCardsCarouselDemo />
+      <StickyScrollRevealDemo/>
       <FloatingDockDemo />
-    <div className="h-[90rem] w-full rounded-md flex flex-col items-center justify-center antialiased">
+      <hr />
+      <Footer />
+    <div className="h-[10rem] w-full rounded-md flex flex-col items-center justify-center antialiased">
       <BackgroundBeams />
     </div>
     </>

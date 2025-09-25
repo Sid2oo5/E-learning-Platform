@@ -13,6 +13,8 @@ import {
 import { useState } from "react";
 // import { TextGenerateEffectDemo } from "./TextGenerateEffectDemo"; 
 import { BackgroundBeamsDemo } from "./BackgroundBeamsDemo";
+import {Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 export function NavbarDemo() {
   const navItems = [
     {
@@ -30,7 +32,7 @@ export function NavbarDemo() {
   ];
  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
- 
+  const navigate = useNavigate(); 
   return (
     <>
     {/* <SpotlightPreview /> */}
@@ -71,13 +73,15 @@ export function NavbarDemo() {
               </a>
             ))}
             <div className="flex w-full flex-col gap-4">
+              <Link to="/signup">
               <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
-                className="w-full"
+                className="w-full cursor-pointer"
               >
                 Login
               </NavbarButton>
+              </Link>
               <NavbarButton
                 onClick={() => setIsMobileMenuOpen(false)}
                 variant="primary"
