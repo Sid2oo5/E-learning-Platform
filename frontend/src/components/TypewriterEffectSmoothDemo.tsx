@@ -4,20 +4,10 @@ import {TypewriterEffectSmooth } from "./ui/typewriter-effect";
 export function TypewriterEffectSmoothDemo() {
   const words = [
     {
-      text: "Build",
+      text: "Learn  Everything Anytime,",
     },
     {
-      text: "awesome",
-    },
-    {
-      text: "apps ",
-    },
-    {
-      text: "with ",
-      className: "gap-2"
-    },
-    {
-      text: "Aceternity.",
+      text: " Anywhere.",
       className: "text-blue-500 dark:text-blue-500 gap-2",
     },
   ];

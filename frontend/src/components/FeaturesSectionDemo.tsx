@@ -13,49 +13,49 @@ import {
 export function FeaturesSectionDemo() {
   const features = [
     {
-      title: "Built for developers",
+      title: "Built for Students",
       description:
-        "Built for engineers, developers, dreamers, thinkers and doers.",
+        "Designed for learners of all ages – school, college, and competitive exams.",
       icon: <IconTerminal2 />,
     },
     {
-      title: "Ease of use",
+      title: "Easy Learning Experience",
       description:
-        "It's as easy as using an Apple, and as expensive as buying one.",
+        "Learning made simple, interactive, and fun for every student.",
       icon: <IconEaseInOut />,
     },
     {
-      title: "Pricing like no other",
+      title: "Affordable for All",
       description:
-        "Our prices are best in the market. No cap, no lock, no credit card required.",
+        "Accessible pricing so every student, anywhere, can learn without barriers.",
       icon: <IconCurrencyDollar />,
     },
     {
-      title: "100% Uptime guarantee",
-      description: "We just cannot be taken down by anyone.",
+      title: "Always Accessible",
+      description: "Learn anytime, anywhere, online or offline with no interruptions.",
       icon: <IconCloud />,
     },
     {
-      title: "Multi-tenant Architecture",
-      description: "You can simply share passwords instead of buying new seats",
-      icon: <IconRouteAltLeft />,
+     title: "Personalized Study Plans",
+    description: "AI-generated schedules and recommendations tailored to each student.",
+    icon: <IconRouteAltLeft />,
     },
     {
-      title: "24/7 Customer Support",
-      description:
-        "We are available a 100% of the time. Atleast our AI Agents are.",
-      icon: <IconHelp />,
+      title: "AI-Powered Doubt Solver",
+    description:
+      "Get instant help for any question or concept with our AI tutor.",
+    icon: <IconHelp />,
     },
     {
-      title: "Money back guarantee",
-      description:
-        "If you donot like EveryAI, we will convince you to like us.",
-      icon: <IconAdjustmentsBolt />,
+      title: "Practice & Progress Tracking",
+    description:
+      "Interactive quizzes, coding challenges, and analytics to track your improvement.",
+    icon: <IconAdjustmentsBolt />,
     },
     {
-      title: "And everything else",
-      description: "I just ran out of copy ideas. Accept my sincere apologies",
-      icon: <IconHeart />,
+      title: "Multilingual & Inclusive",
+    description: "Learning in multiple languages with offline downloads for everyone.",
+    icon: <IconHeart />,
     },
   ];
   return (

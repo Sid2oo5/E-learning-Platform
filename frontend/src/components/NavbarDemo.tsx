@@ -18,21 +18,21 @@ import { useNavigate } from "react-router-dom";
 export function NavbarDemo() {
   const navItems = [
     {
-      name: "Features",
-      link: "#features",
+      name: "Explore",
+      link: "#explore",
     },
     {
-      name: "Pricing",
-      link: "#pricing",
+      name: "Problems",
+      link: "#problems",
     },
     {
-      name: "Contact",
-      link: "#contact",
+      name: "Dashboard",
+      link: "#dashboard",
     },
   ];
  
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navigate = useNavigate(); 
+  
   return (
     <>
     {/* <SpotlightPreview /> */}
@@ -43,8 +43,10 @@ export function NavbarDemo() {
           <NavbarLogo />
           <NavItems items={navItems} />
           <div className="flex items-center gap-4">
+            <Link to="/signup">
             <NavbarButton variant="secondary">Login</NavbarButton>
-            <NavbarButton variant="primary">Book a call</NavbarButton>
+            </Link>
+            <NavbarButton variant="primary">SignUp</NavbarButton>
           </div>
         </NavBody>
  
