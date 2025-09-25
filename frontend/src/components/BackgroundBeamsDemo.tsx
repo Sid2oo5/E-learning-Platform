@@ -8,7 +8,7 @@ import { InfiniteMovingCardsDemo } from "./InfiniteMovingCardsDemo";
 import { StickyScrollRevealDemo } from "./StickyScrollRevealDemo";
 import { AppleCardsCarouselDemo } from "./AppleCardsCarouselDemo"; 
 import Footer from "./Footer"; 
-import {Dashboard} from "./Dashboard"
+import Dashboard from "./Dashboard"
 // import { TextGenerateEffectDemo } from "./TextGenerateEffectDemo";
  
 export function BackgroundBeamsDemo() {
@@ -20,7 +20,6 @@ export function BackgroundBeamsDemo() {
       <AppleCardsCarouselDemo />
       <StickyScrollRevealDemo/>
       <FloatingDockDemo />
-      <Dashboard/>
       <hr />
       <Footer />
     <div className="h-[10rem] w-full rounded-md flex flex-col items-center justify-center antialiased">
