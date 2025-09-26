@@ -51,7 +51,7 @@ export const ProgressBar: FC<{ progress: number }> = ({ progress }) => (
       className="h-3 rounded-full transition-all duration-500"
       style={{
         width: `${Math.max(0, Math.min(100, progress))}%`,
-        background: "linear-gradient(90deg,#6b21a8,#06b6d4)",
+        background: "#008000",
       }}
     />
   </div>
@@ -68,9 +68,11 @@ export const StatsCard: FC<{ stat: Stat }> = ({ stat }) => (
 );
 
 export const ProfileCard: FC<{ overallProgress: number; stats: Stat[] }> = ({ overallProgress, stats }) => (
+  <>
+  <h1>Hi, Siddhesh</h1>
   <div className="p-4 bg-black/40 rounded-4xl border border-gray-800 backdrop-blur-sm space-y-4">
     <div className="flex items-center gap-4">
-      <div className="w-16 h-16 rounded-full bg-gradient-to-br from-purple-700 to-cyan-500 flex items-center justify-center overflow-hidden border ring-1 ring-white/5">
+      <div className="w-16 h-16 rounded-full bg-gradient-to-br bg-cyan-500 flex items-center justify-center overflow-hidden border ring-1 ring-white/5">
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
           <path d="M12 12c2.761 0 5-2.239 5-5s-2.239-5-5-5-5 2.239-5 5 2.239 5 5 5z" fill="#0ea5a4" />
           <path d="M3 20.5c0-3.866 3.582-7 9-7s9 3.134 9 7v.5H3v-.5z" fill="#7c3aed" />
@@ -96,10 +98,11 @@ export const ProfileCard: FC<{ overallProgress: number; stats: Stat[] }> = ({ ov
       ))}
     </div>
   </div>
+  </>
 );
 
 export const CoursesList: FC<{ courses: Course[]; onContinue: (id: string) => void }> = ({ courses, onContinue }) => (
-  <div className="space-y-4">
+  <div className="space-y-6">
     {courses.map((c) => (
       <div
         key={c.id}
@@ -159,7 +162,7 @@ const RecommendedCourses: FC<{ recommended: Course[]; enroll: (id: string) => vo
           <div className="mt-auto flex gap-2">
             <button
               onClick={() => enroll(r.id)}
-              className="flex-1 py-2 rounded-lg bg-gradient-to-r from-purple-700 to-cyan-500 text-black font-medium text-xs"
+              className="flex-1 py-2 rounded-lg bg-gradient-to-r bg-green-700 text-black font-medium text-xs"
             >
               Enroll
             </button>
@@ -199,7 +202,7 @@ const PracticeSection: FC<{ practice: Practice[] }> = ({ practice }) => (
       <h4 className="text-sm font-semibold mb-3">Upcoming Tests</h4>
       <div className="text-sm text-gray-400">No scheduled tests. Try a mock test to track performance.</div>
       <div className="mt-4">
-        <button className="w-full py-2 rounded-lg bg-gradient-to-r from-purple-700 to-cyan-500 text-black font-semibold">
+        <button className="w-full py-2 rounded-lg bg-gradient-to-r bg-blue-600 text-black font-semibold">
           Take Mock Test
         </button>
       </div>
@@ -290,7 +293,7 @@ export default function Dashboard() {
         </div>
 
         {/* Right Column */}
-        <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6 mt-12">
           <section className="p-4 bg-black/30 rounded-4xl border border-gray-800 backdrop-blur-sm">
             <div className="flex items-center justify-between mb-3">
               <h2 className="text-lg font-semibold">Courses & Subjects</h2>
