@@ -4,48 +4,178 @@ import { AiOutlineRobot } from "react-icons/ai";
 
 const SmartLearning: React.FC = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [activeFeature, setActiveFeature] = useState<string | null>(null);
 
   const features = [
     {
       title: "Interactive Video Lessons",
       description:
         "Engaging video lessons that make learning fun, easy, and effective.",
+      type: "videos",
     },
     {
       title: "Offline Downloads",
       description:
         "Download your lessons and learn anytime, anywhere — even without the internet.",
+      type: "downloads",
     },
     {
       title: "Smart Quizzes",
       description:
         "Test your understanding with adaptive quizzes that match your learning speed.",
+      type: "quizzes",
     },
     {
       title: "Progress Tracking",
       description:
         "Track your daily learning progress and identify areas for improvement.",
+      type: "progress",
     },
     {
       title: "AI Tutor (24/7)",
       description:
         "Ask questions, clear doubts, and get step-by-step explanations — available in multiple languages.",
+      type: "ai",
     },
   ];
 
+  const handleFeatureClick = (feature: string) => {
+    setActiveFeature(feature);
+    setShowPopup(true);
+  };
+
+  const renderPopupContent = () => {
+    switch (activeFeature) {
+      case "downloads":
+        return (
+          <>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">
+              Offline Downloads
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Access your downloaded lessons anytime — even without the internet.
+            </p>
+            <div className="grid grid-cols-2 gap-4">
+              {[1, 2, 3, 4].map((num) => (
+                <div
+                  key={num}
+                  className="bg-gray-800/70 border border-gray-700 rounded-2xl p-2 cursor-pointer hover:scale-105 transition-all"
+                >
+                  <div className="w-full h-28 bg-gradient-to-br from-gray-700 to-black rounded-2xl mb-2 flex items-center justify-center text-gray-400">
+                    🎬 Video {num}
+                  </div>
+                  <p className="text-sm text-gray-300 text-center">Lesson {num}</p>
+                </div>
+              ))}
+            </div>
+          </>
+        );
+
+      case "videos":
+        return (
+          <>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">
+              Interactive Video Lessons
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Explore engaging video lessons designed for better understanding.
+            </p>
+            <div className="grid grid-cols-2 gap-4">
+              {[1, 2, 3, 4].map((num) => (
+                <div
+                  key={num}
+                  className="bg-gray-800/70 border border-gray-700 rounded-2xl p-2 hover:scale-105 transition-all"
+                >
+                  <div className="w-full h-28 bg-gradient-to-br from-gray-700 to-black rounded-2xl flex items-center justify-center text-gray-400">
+                    ▶️ Lesson {num}
+                  </div>
+                  <p className="text-sm text-gray-300 text-center">
+                    Topic {num}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </>
+        );
+
+      case "quizzes":
+        return (
+          <>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">
+              Smart Quizzes
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Challenge yourself with adaptive quizzes that suit your learning speed.
+            </p>
+            <div className="grid grid-cols-2 gap-4">
+              {["Math", "Science", "History", "English"].map((subject, i) => (
+                <div
+                  key={i}
+                  className="bg-gray-800/70 border border-gray-700 rounded-2xl p-4 text-center text-gray-300 hover:scale-105 transition-all cursor-pointer"
+                >
+                  🧠 {subject} Quiz
+                </div>
+              ))}
+            </div>
+          </>
+        );
+
+      case "progress":
+        return (
+          <>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">
+              Progress Tracking
+            </h2>
+            <p className="text-gray-300 mb-6">
+              See your growth and achievements at a glance.
+            </p>
+            <div className="space-y-3">
+              {["Mathematics", "Physics", "History", "English"].map((subject, i) => (
+                <div
+                  key={i}
+                  className="bg-gray-800/70 border border-gray-700 rounded-2xl p-4"
+                >
+                  <p className="text-gray-300">{subject}</p>
+                  <div className="w-full bg-gray-700 rounded-full h-2 mt-2">
+                    <div
+                      className="bg-blue-500 h-2 rounded-full"
+                      style={{ width: `${50 + i * 10}%` }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        );
+
+      case "ai":
+        return (
+          <>
+            <h2 className="text-2xl font-semibold mb-4 text-blue-400">
+              AI Tutor (24/7)
+            </h2>
+            <p className="text-gray-300 mb-6">
+              Get instant explanations and answers from your personal AI tutor.
+            </p>
+            <button
+              onClick={() => alert("AI Tutor feature coming soon!")}
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-3xl text-white transition-all"
+            >
+              Ask AI
+            </button>
+          </>
+        );
+
+      default:
+        return null;
+    }
+  };
+
   return (
-    <div
-      className="min-h-screen flex flex-col items-center justify-center bg-black/80 relative bg-cover bg-center px-4 py-10"
-      style={{
-        backgroundImage:
-          'url(https://imgs.search.brave.com/mbFxW0iBv3IVY-u4F1aiUOOZtaUBVZZfUhgDHWmMTVo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dHV0b3JpZnkuaW4v/c3RhdGljL2ltYWdl/cy9ibG9nZ2luZy5z/dmc)',
-      }}
-    >
+    <div className="min-h-screen flex flex-col items-center justify-center bg-black/80 relative bg-cover bg-center px-4 py-10 rounded-4xl">
       {/* Header */}
       <div className="text-center mb-10">
-        <h1 className="text-5xl font-bold text-white mb-3">
-          Smarter Way to Learn
-        </h1>
+        <h1 className="text-5xl font-bold text-white mb-3">Smarter Way to Learn</h1>
         <h2 className="text-2xl text-blue-400 mb-6">
           Interactive learning powered by AI.
         </h2>
@@ -61,8 +191,9 @@ const SmartLearning: React.FC = () => {
         {features.map((feature, index) => (
           <motion.div
             key={index}
-            whileHover={{ scale: 1.03 }}
-            className="rounded-4xl bg-gray-900/70 border border-gray-700 p-6 text-center text-white shadow-lg backdrop-blur-md"
+            whileHover={{ scale: 1.05 }}
+            onClick={() => handleFeatureClick(feature.type)}
+            className="rounded-4xl bg-gray-900/70 border border-gray-700 p-6 text-center text-white shadow-lg backdrop-blur-md cursor-pointer hover:shadow-blue-700/20"
           >
             <h3 className="text-2xl font-semibold mb-3 text-blue-400">
               {feature.title}
@@ -76,13 +207,13 @@ const SmartLearning: React.FC = () => {
       <motion.button
         whileHover={{ scale: 1.1, rotate: 10 }}
         whileTap={{ scale: 0.95 }}
-        onClick={() => setShowPopup(true)}
+        onClick={() => handleFeatureClick("ai")}
         className="fixed bottom-6 right-6 bg-gradient-to-br from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white p-5 rounded-4xl shadow-[0_0_25px_rgba(59,130,246,0.6)] flex items-center justify-center transition-all duration-300"
       >
         <AiOutlineRobot className="text-3xl" />
       </motion.button>
 
-      {/* AI Popup */}
+      {/* Popup for Features */}
       <AnimatePresence>
         {showPopup && (
           <motion.div
@@ -90,28 +221,17 @@ const SmartLearning: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 40 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50"
+            className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 px-4"
           >
-            <div className="bg-gray-900/80 border border-gray-700 rounded-4xl p-8 max-w-md w-full text-white shadow-2xl text-center">
-              <h2 className="text-2xl font-semibold mb-3 text-blue-400">
-                Take Help from AI
-              </h2>
-              <p className="text-gray-300 mb-6">
-                Need help understanding a topic or solving a question?  
-                Ask your AI tutor for instant guidance and step-by-step explanations.
-              </p>
-              <div className="flex justify-center space-x-4">
+            <div className="bg-gray-900/80 border border-gray-700 rounded-4xl p-8 max-w-lg w-full text-white shadow-2xl">
+              {renderPopupContent()}
+
+              <div className="mt-6 text-center">
                 <button
                   onClick={() => setShowPopup(false)}
-                  className="px-5 py-2 bg-gray-700 hover:bg-gray-600 rounded-4xl transition"
+                  className="px-6 py-2 bg-gray-700 hover:bg-gray-600 rounded-3xl transition"
                 >
                   Close
-                </button>
-                <button
-                  onClick={() => alert('AI Tutor Feature Coming Soon!')}
-                  className="px-5 py-2 bg-blue-600 hover:bg-blue-700 rounded-4xl transition"
-                >
-                  Ask AI
                 </button>
               </div>
             </div>

@@ -5,6 +5,10 @@ import { Carousel, Card } from "../ui/Features";
 import DoubtPage from "../ui/DoubtPage";
 import ProductivityPage from "../ui/ProductivityPage";
 import SmartLearning from "../ui/SmartLearning";
+import MultiLanguageLearning from "../ui/MultiLanguageLearning";
+import CompetitivePrep from "../ui/CompetitivePrep";
+import CareerGrowth from "../ui/CareerGrowth";
+
 
 export function AppleCardsCarouselDemo() {
   const cards = data.map((card, index) => (
@@ -42,78 +46,19 @@ const Learning = () => {
 
 const Competitive = () => {
   return (
-    <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
-      <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-        <span className="font-bold text-neutral-700 dark:text-neutral-200">
-          Crack Competitive Exams with Confidence.
-        </span>{" "}
-        Whether it’s NEET, JEE, UPSC, or MPSC, get structured preparation with mock 
-        tests, problem-solving practice (like LeetCode), and personalized AI-generated 
-        study schedules to boost performance.
-      </p>
-      <img
-        src="https://imgs.search.brave.com/VGNz8fSeG0MMRXD9t6n3ERlY2VjgJl3pmgYcJi4oX5k/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS12ZWN0/b3IvZXhhbS1jb25j/ZXB0LWV4YW1pbmF0/aW9uLW9ubGluZS10/ZXN0LWFuc3dlci1j/aGVja2xpc3Qtc3R1/ZGVudC1jb2xsYWdl/LWZsYXQtaWxsdXN0/cmF0aW9uLXZlY3Rv/ci1iYW5uZXJfMTI4/NzcyLTE4MDAuanBn/P3NlbXQ9YWlzX2h5/YnJpZA"
-        alt="Competitive exams prep mockup"
-        height="500"
-        width="500"
-        className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain mt-4 rounded-3xl"
-      />
-    </div>
+   <CompetitivePrep/>
   );
 };
 
 const Language = () => {
   return (
-    <div className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
-      <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-        <span className="font-bold text-neutral-700 dark:text-neutral-200">
-          Learn in Your Own Language.
-        </span>{" "}
-        All content is available in multiple Indian languages, so every student—
-        from rural to urban—can study comfortably. Switch between English, Hindi, 
-        Marathi, Tamil, and more with one click.
-      </p>
-      <img
-        src="https://imgs.search.brave.com/VaaEp-4CSX36V469Ph9gZytOrPvOmlS1rwBvfUAPyoY/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cy4x/MjNyZi5jb20vNDUw/d20vZ2FyYWdlc3Rv/Y2svZ2FyYWdlc3Rv/Y2sxNzAyL2dhcmFn/ZXN0b2NrMTcwMjE3/MjY1LzcyMzMwODg0/LWxlYXJuLWEtbmV3/LWxhbmd1YWdlLWNv/bmNlcHQuanBnP3Zl/cj02"
-        alt="Language learning mockup"
-        height="500"
-        width="500"
-        className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain mt-4 rounded-3xl"
-      />
-    </div>
+    <MultiLanguageLearning/>
   );
 };
 
 const Career = () => {
   return (
-    <>
-      {[...new Array(1).fill(1)].map((_, index) => {
-        return (
-          <div
-            key={"dummy-content" + index}
-            className="bg-[#F5F5F7] dark:bg-neutral-800 p-8 md:p-14 rounded-3xl mb-4">
-            <p
-              className="text-neutral-600 dark:text-neutral-400 text-base md:text-2xl font-sans max-w-3xl mx-auto">
-              <span className="font-bold text-neutral-700 dark:text-neutral-200">
-                The first rule of learning is that it should be accessible to everyone.
-              </span>{" "}
-              Explore subjects, prepare for competitive exams, solve coding
-              challenges, and clear your doubts instantly with AI. Whether
-              you’re in school, college, or preparing for UPSC, our platform
-              helps you stay on track with personalized study plans and offline
-              access.
-            </p>
-            <img
-              src="https://imgs.search.brave.com/azBZd-Sy44_HSLT2HHoLJ5c5hYaCuBMsqQnCHcJ9kMo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTQ3/ODk2Mjg5NC9waG90/by9lLWxlYXJuaW5n/LWVkdWNhdGlvbi10/ZWNobm9sb2d5LW9u/bGluZS1jb3Vyc2Ut/aW50ZXJuZXQtY29u/Y2VwdC13ZWJpbmFy/LW9ubGluZS1lZHVj/YXRpb24tb24uanBn/P3M9NjEyeDYxMiZ3/PTAmaz0yMCZjPTJP/WjNkc3p4MURkQW9H/UFlaM19mWnZEbkdR/bnJpRFA2SGZpMUxK/Um92Y009"
-              alt="E-learning mockup"
-              height="500"
-              width="500"
-              className="md:w-1/2 md:h-1/2 h-full w-full mx-auto object-contain mt-4 rounded-3xl" />
-              <button className="w-60 h-full mx-auto object-contain mt-4 p-2 bg-blue-600 rounded-4xl ml-74 cursor-pointer">Get Started</button>
-          </div>
-        );
-      })}
-    </>
+   <CareerGrowth/>
   );
 };
 const data = [
