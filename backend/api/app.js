@@ -1,22 +1,32 @@
-const express = require('express');
-const cors = require('cors');
-const dotenv = require('dotenv');
-const authRoutes = require('./routes/authRoutes')
-const {connectDB} = require('./config/db')
-const surveyRoutes = require('./routes/surveyRoutes');
-const recommendationRoutes = require('./utils/recommendationEngine')
-const problemRoutes = require('./routes/Problem')
+// server.js  — ES Module version
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import doubtRoutes from "./routes/doubtRoutes.js"; // 👈 note the .js extension
+
 dotenv.config();
+
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-connectDB();
+// ✅ Test route
+app.get("/", (req, res) => {
+  res.json({ message: "AI Doubt Solver Backend Running ✅" });
+});
 
-app.use("/api/auth", authRoutes);
-app.use("/api/survey" , surveyRoutes);
-app.use("/api/problem" ,problemRoutes);
+// ✅ Mount the routes
+app.use("/api/doubts", doubtRoutes);
 
-const PORT = process.env.PORT;
+// ✅ Fallback for unknown routes
+app.use((req, res) => {
+  res.status(404).json({
+    success: false,
+    error: "Route not found",
+  });
+});
 
-app.listen(PORT, ()=> console.log(`Server Running at port ${PORT}`));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
+});

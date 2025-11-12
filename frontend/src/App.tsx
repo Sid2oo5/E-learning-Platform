@@ -8,6 +8,7 @@ import Survey from './components/container/Survey'
 import './App.css'
 import Dashboard from './components/container/Dashboard'
 
+
 function App() {
  
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path="/explore" element={<Explore />} /> 
         <Route path="/problems" element={<Problem />} />
         <Route path="/survey" element={<Survey />} />
+
+         
       </Routes>
     </BrowserRouter>
   )

@@ -1,29 +1,24 @@
-// // server.js or routes/solveDoubt.js
 // import express from "express";
 // import cors from "cors";
-// import bodyParser from "body-parser";
-// import { GoogleGenerativeAI } from "@google/generative-ai";
+// import dotenv from "dotenv";
+// import authRoutes from "./routes/authRoutes.js";
+// import { connectDB } from "./config/db.js";
+// import surveyRoutes from "./routes/surveyRoutes.js";
+// import recommendationRoutes from "./utils/recommendationEngine.js";
+// import problemRoutes from "./routes/Problem.js";
+// import geminiRoutes from "./api/routes/geminiRoutes.js";
 
+// dotenv.config();
 // const app = express();
 // app.use(cors());
-// app.use(bodyParser.json());
+// app.use(express.json());
 
-// const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+// connectDB();
 
-// app.post("/solve-doubt", async (req, res) => {
-//   try {
-//     const { question } = req.body;
+// app.use("/api/auth", authRoutes);
+// app.use("/api/survey", surveyRoutes);
+// app.use("/api/problem", problemRoutes);
+// app.use("/gemini", geminiRoutes);
 
-//     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-//     const result = await model.generateContent(question);
-//     const answer = result.response.text();
-
-//     res.json({ answer });
-//   } catch (error) {
-//     console.error("Gemini API Error:", error);
-//     res.status(500).json({ error: "Failed to fetch AI answer" });
-//   }
-// });
-
-// const PORT = 3000;
-// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => console.log(`✅ Server Running at port ${PORT}`));
